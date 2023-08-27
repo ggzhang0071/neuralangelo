@@ -36,7 +36,7 @@ def parse_args():
     parser.add_argument("--output_file", default="mesh.ply", type=str, help="Output file name")
     parser.add_argument("--textured", action="store_true", help="Export mesh with texture")
     args, cfg_cmd = parser.parse_known_args()
-    return args, cfg_cmd
+    return args, cfg_cmd 
 
 
 def main():
@@ -98,7 +98,7 @@ def main():
             print(mesh.visual.vertex_colors[0], mesh.visual.vertex_colors[100], mesh.visual.vertex_colors[1000])
         # center and scale
         mesh.vertices = mesh.vertices * meta["sphere_radius"] + np.array(meta["sphere_center"])
-        mesh.remove_degenerate_faces()
+        mesh.update_faces(mesh.nondegenerate_faces() )
         mesh.export(args.output_file)
 
 

@@ -21,6 +21,8 @@ from imaginaire.utils.gpu_affinity import set_affinity
 from imaginaire.trainers.utils.logging import init_logging
 from imaginaire.trainers.utils.get_trainer import get_trainer
 from imaginaire.utils.set_random_seed import set_random_seed
+import wandb
+wandb.login(key='d899f437266ebb7a98686372ead893d79a8af88d')
 
 
 def parse_args():

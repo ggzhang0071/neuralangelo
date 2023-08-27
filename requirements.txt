@@ -1,6 +1,6 @@
 addict
 gdown
-git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+
 gpustat
 icecream
 imageio-ffmpeg
@@ -32,3 +32,6 @@ termcolor
 tqdm
 trimesh
 wandb
+
+#pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
